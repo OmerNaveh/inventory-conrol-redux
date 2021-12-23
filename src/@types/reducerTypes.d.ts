@@ -22,4 +22,5 @@ declare namespace ReduxTypes{
         name: string,
         fullQuantity: number,
     }
+    type RootState = ReturnType<typeof rootReducer>
 }
