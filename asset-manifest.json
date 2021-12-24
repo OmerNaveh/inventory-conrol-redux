@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/inventory-conrol-redux/static/css/main.7765da66.css",
+    "main.js": "/inventory-conrol-redux/static/js/main.668bae9a.js",
+    "index.html": "/inventory-conrol-redux/index.html",
+    "main.7765da66.css.map": "/inventory-conrol-redux/static/css/main.7765da66.css.map",
+    "main.668bae9a.js.map": "/inventory-conrol-redux/static/js/main.668bae9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7765da66.css",
+    "static/js/main.668bae9a.js"
+  ]
+}
