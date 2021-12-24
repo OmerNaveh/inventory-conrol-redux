@@ -12,7 +12,9 @@ declare namespace ReduxTypes{
     }
     interface actionInventory{
         type:string
-        payload?:{name:string, current:number, fullQuantity:number}[]
+        payload?:{name:string, missing?:number,current?:number, fullQuantity:number}[],
+        name?:string
+        current?:number
     }
     interface actionUser{
         type:string
