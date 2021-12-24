@@ -1,6 +1,7 @@
 import {  useSelector } from 'react-redux'
 import AddItem from './AddItem'
 import Item from './Item'
+import SignatureCanvas from 'react-signature-canvas';
 
 export default function InventoryForm() {
     const {inventoryReducer} = useSelector((state:ReduxTypes.RootState)=>state)
@@ -27,6 +28,7 @@ export default function InventoryForm() {
             </table>
         </div>
            <AddItem />
+           <SignatureCanvas penColor='blue' canvasProps={{width: 300, height: 150, className: 'sigCanvas'}} />
         </div>
     )
 }

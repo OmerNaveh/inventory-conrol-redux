@@ -8,7 +8,7 @@ tr{
     text-align: center;
 }
 .addItem{
-    margin-top: 5%;
+    margin-top: 1%;
    display: flex;
    flex-direction: column;
    padding: 0 25%;
@@ -45,4 +45,10 @@ thead{
 }
 .entryForm{
     text-align: center;
+}
+.sigCanvas{
+    border: 1px solid black;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
 }
