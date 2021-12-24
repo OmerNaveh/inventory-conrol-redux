@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
+import { errorHandler } from '../errorHandler/errorPop'
 
 export default function UserForm() {
     const dispatch = useDispatch()
@@ -12,11 +13,15 @@ export default function UserForm() {
         const fullName = fullNameInput.current.value;
         const workPlace = workPlaceInput.current.value;
         const date = dateInput.current.value;
+        if(!fullName || !workPlace || !date) {
+            errorHandler('must enter all fields')
+            return;
+        }
         dispatch({type:"Current_Worker", payload:{fullName, workPlace, date}})
     }
     
     return (
-        <div>
+        <div className='entryForm'>
             <p>
                 Enter Full Name:
                 <input ref={fullNameInput}></input>

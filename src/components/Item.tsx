@@ -17,12 +17,12 @@ export default function Item(props:{name:string, quantity:number, missing:number
         dispatch({type:"Remove_Product", payload:[{name:props.name, added:props.added}]})
     }
         return (
-        <div>
-            {props.name}
-            {props.quantity}
-           <input type="number" ref={currentInput} onChange={()=>{changeMissing()}}/> 
-           {props.missing || 0}
+        <tr>
+            <td>{props.name}</td>
+            <td>{props.quantity} </td>
+           <td><input type="number" min={0} max={props.quantity} className='currentInput' ref={currentInput} onChange={()=>{changeMissing()}}/> </td>
+           <td>{props.missing || 0}</td>
            {props.added? <button onClick={()=>{removeItem()}}>Remove Item</button> : null}
-        </div>
+        </tr>
     )
 }

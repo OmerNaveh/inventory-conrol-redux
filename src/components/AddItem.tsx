@@ -18,12 +18,23 @@ export default function AddItem() {
         currentInput.current.value= ''
     }
     return (
-        <div>
-            <p>Add Item:</p>
-            <p>Item Name:<input ref={nameInput}></input></p>
-            <p>Item Full Quantity:<input type="number" ref={fullInput}></input></p>
-            <p>Item Current Quantity:<input type="number" ref={currentInput}></input></p>
-            <button onClick={()=>{addItem()}}>Submit</button>
+        <div className='addItem'>
+            <h3>Add Item:</h3>
+            <div className='Inputs'>
+                <div className='addFlex'>
+                    <p>Item Name:</p>
+                    <input className='input' ref={nameInput}></input>
+                </div>
+                <div className='addFlex'>
+                    <p>Item Full Quantity:</p>
+                    <input className='input' type="number" ref={fullInput}></input>
+                </div>
+                <div className='addFlex'>
+                    <p>Item Current Quantity:</p>
+                    <input className='input' type="number" ref={currentInput}></input>
+                </div>
+            </div>
+            <button  onClick={()=>{addItem()}}>Submit</button>
         </div>
     )
 }

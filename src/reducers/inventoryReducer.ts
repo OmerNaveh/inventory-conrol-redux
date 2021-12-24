@@ -22,7 +22,7 @@ export const inventoryReducer = (state:ReduxTypes.stateInventory[]=initialState,
 
         case "Remove_Product":
             const item = action.payload[0];
-            return state.filter(({name,added})=> !added && name !== item.name)
+            return state.filter(({name})=>  name !== item.name)
     
         default:
             return state;

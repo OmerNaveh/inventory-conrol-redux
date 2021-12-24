@@ -13,7 +13,19 @@ export default function InventoryForm() {
     
     return (
         <div>
-           {renderItems()}
+        <div className='inventory'>
+            <table>
+                <thead>
+                    <th>Item Name</th>
+                    <th>Full Quantity</th>
+                    <th>Current Quantity</th>
+                    <th>Missing</th>
+                </thead>
+                <tbody>
+                    {renderItems()}
+                </tbody>
+            </table>
+        </div>
            <AddItem />
         </div>
     )
